@@ -8,7 +8,7 @@ Author: 如梦浮尘
 Author URI: https://www.winmx.cn
 */
 function addvideo_styles() {
-  wp_register_script('addvideo-stylesheet', plugins_url('/static/smartideo.css', __FILE__));
+  wp_register_script('addvideo-stylesheet', plugins_url('/static/smartvideo.css', __FILE__));
   wp_enqueue_script('addvideo-stylesheet');
 }
 add_action( 'wp_enqueue_scripts', 'addvideo_styles' );  
@@ -158,7 +158,7 @@ class addvideo{
 
 	private function get_iframe($url = '', $source = ''){
 		$html = '';
-		$html .='<div class="smartideo"><div class="player"><iframe src="' . $url . '" width="100%" height="100%" frameborder="0" allowfullscreen="true"></iframe></div>';
+		$html .='<div class="smartvideo"><div class="player"><iframe src="' . $url . '" width="100%" height="100%" frameborder="0" allowfullscreen="true"></iframe></div>';
 		$html .= '</div>';
 		return $html;
 	}
